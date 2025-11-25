@@ -1,0 +1,42 @@
+{
+   "manifest_version": 3,
+   "name": "Spotify +",
+   "version": "1.0",
+   "description": "Spotify Ads Skipper.",
+   "icons": {
+      "128": "img/icon.png"
+   },
+   "content_scripts": [
+      {
+         "matches": [
+            "https://open.spotify.com/*"
+         ],
+         "css": [
+            "style.css"
+         ],
+         "js": [
+            "js/content.js"
+         ]
+      }
+   ],
+   "host_permissions": [
+      "*://open.spotify.com/*",
+      "*://audio-ak-spotify-com.akamaized.net/*",
+      "https://*.googlesyndication.com/*",
+      "*://audio-akp-quic-spotify-com.akamaized.net/*",
+      "*://gae-spclient.spotify.com/*",
+      "*://*.audio-fa.scdn.co/*"
+   ],
+   "permissions": [
+      "declarativeNetRequest"
+   ],
+   "declarative_net_request": {
+      "rule_resources": [
+         {
+            "id": "sptfads_rules",
+            "enabled": true,
+            "path": "rules.json"
+         }
+      ]
+   }
+}
