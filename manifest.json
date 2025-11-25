@@ -4,7 +4,7 @@
    "version": "1.0",
    "description": "Spotify Ads Skipper.",
    "icons": {
-      "128": "img/icon.png"
+      "128": ".github/icon.png"
    },
    "content_scripts": [
       {
